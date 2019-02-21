@@ -74,7 +74,9 @@ class ViewController: UIViewController {
                     if button.title(for: .normal) != "X" || button.title(for: .normal) != "O"{
                         button.isEnabled = false
                     }
+                    
                 }
+                turnEveryButtonToWinner()
                 
             } else {
                 // Change active player
@@ -102,6 +104,8 @@ class ViewController: UIViewController {
                     if button.title(for: .normal) != "X" || button.title(for: .normal) != "O"{
                         button.isEnabled = false
                     }
+                    
+                    turnEveryButtonToWinner()
                 }
             } else {
                 // Change active player
@@ -114,6 +118,28 @@ class ViewController: UIViewController {
 
         
     }
+    @IBAction func newGameButtonTapped(_ sender: UIButton) {
+        startNewRound()
+    }
     @IBOutlet var gameButton: [UIButton]!
+    
+    func startNewRound(){
+        var buttonCounter = 1
+        
+        for button in gameButton {
+            button.setTitle(String(buttonCounter), for: .normal)
+            button.isEnabled = true
+            buttonCounter += 1
+            activePlayer = "X"
+            playerTurnLabel.text = "Player \(activePlayer) Turn"
+        }
+        
+    }
+    
+    func turnEveryButtonToWinner (){
+        for button in gameButton {
+            button.setTitle(activePlayer, for: .normal)
+        }
+    }
 }
 

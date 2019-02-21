@@ -6,6 +6,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -147,13 +148,29 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="j6r-8Y-YVb">
+                                <rect key="frame" x="16" y="548.5" width="343" height="57.5"/>
+                                <color key="backgroundColor" name="Blue-ish"/>
+                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="25"/>
+                                <color key="tintColor" name="Blue-ish"/>
+                                <state key="normal" title="New Game">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="newGameButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Awh-6E-3bS"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="6hk-x0-VdF" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="7yt-Ta-9Wr"/>
+                            <constraint firstItem="j6r-8Y-YVb" firstAttribute="top" secondItem="6hk-x0-VdF" secondAttribute="bottom" constant="45" id="EWn-YY-NfO"/>
                             <constraint firstItem="B53-ph-y04" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="NiN-0q-dXW"/>
                             <constraint firstItem="6hk-x0-VdF" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="Spn-bg-ZxW"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="j6r-8Y-YVb" secondAttribute="bottom" constant="61" id="WUt-bk-9uf"/>
+                            <constraint firstItem="j6r-8Y-YVb" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="YhB-Fy-w7d"/>
                             <constraint firstItem="B53-ph-y04" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="55" id="sT5-Tb-RcE"/>
+                            <constraint firstItem="j6r-8Y-YVb" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="yKO-Eb-cGX"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
@@ -175,4 +192,9 @@
             <point key="canvasLocation" x="136.80000000000001" y="133.5832083958021"/>
         </scene>
     </scenes>
+    <resources>
+        <namedColor name="Blue-ish">
+            <color red="0.5" green="0.5" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
 </document>
