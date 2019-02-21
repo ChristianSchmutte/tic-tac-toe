@@ -65,6 +65,7 @@ class ViewController: UIViewController {
             
             // Set button title to active player
             sender.setTitle(activePlayer, for: .normal)
+            sender.setTitleColor(.white , for: .normal)
             
             // Disable button
             sender.isEnabled = false
@@ -95,6 +96,7 @@ class ViewController: UIViewController {
             
             // Set button title to active player
             sender.setTitle(activePlayer, for: .normal)
+            sender.setTitleColor(.white , for: .normal)
             
             // Disable button
             sender.isEnabled = false
@@ -132,6 +134,7 @@ class ViewController: UIViewController {
         
         for button in gameButton {
             button.setTitle(String(buttonCounter), for: .normal)
+            button.setTitleColor(UIColor(named: "myGrey"), for: .normal)
             button.isEnabled = true
             cellDict[String(buttonCounter)] = String(buttonCounter)
             buttonCounter += 1
@@ -146,6 +149,7 @@ class ViewController: UIViewController {
     func turnEveryButtonToWinner (){
         for button in gameButton {
             button.setTitle(activePlayer, for: .normal)
+            button.setTitleColor(.white, for: .normal)
         }
     }
     
