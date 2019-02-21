@@ -17,6 +17,8 @@ class ViewController: UIViewController {
 
     @IBOutlet weak var playerTurnLabel: UILabel!
     var activePlayer = "X"
+    var scoreX = 0
+    var scoreO = 0
     
     // declare new game
     
@@ -77,6 +79,7 @@ class ViewController: UIViewController {
                     
                 }
                 turnEveryButtonToWinner()
+                updateScoreBoard(activePlayer)
                 
             } else {
                 // Change active player
@@ -104,9 +107,9 @@ class ViewController: UIViewController {
                     if button.title(for: .normal) != "X" || button.title(for: .normal) != "O"{
                         button.isEnabled = false
                     }
-                    
-                    turnEveryButtonToWinner()
                 }
+                turnEveryButtonToWinner()
+                updateScoreBoard(activePlayer)
             } else {
                 // Change active player
                 activePlayer = "X"
@@ -123,16 +126,20 @@ class ViewController: UIViewController {
     }
     @IBOutlet var gameButton: [UIButton]!
     
+    @IBOutlet weak var scoreBoardLabel: UILabel!
     func startNewRound(){
         var buttonCounter = 1
         
         for button in gameButton {
             button.setTitle(String(buttonCounter), for: .normal)
             button.isEnabled = true
+            cellDict[String(buttonCounter)] = String(buttonCounter)
             buttonCounter += 1
             activePlayer = "X"
             playerTurnLabel.text = "Player \(activePlayer) Turn"
         }
+        
+        
         
     }
     
@@ -140,6 +147,18 @@ class ViewController: UIViewController {
         for button in gameButton {
             button.setTitle(activePlayer, for: .normal)
         }
+    }
+    
+    func updateScoreBoard(_ winner: String) {
+        if winner == "X"{
+            scoreX += 1
+            scoreBoardLabel.text = "Player X: \(scoreX)  Player O: \(scoreO)"
+        } else if winner == "O" {
+            scoreO += 1
+            scoreBoardLabel.text = "Player X: \(scoreX)  Player O: \(scoreO)"
+        }
+        
+        
     }
 }
 

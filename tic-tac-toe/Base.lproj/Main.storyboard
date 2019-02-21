@@ -160,6 +160,12 @@
                                     <action selector="newGameButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Awh-6E-3bS"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Player X: 0  Player O: 0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2dk-iH-Vbe">
+                                <rect key="frame" x="100.5" y="126" width="174.5" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
@@ -169,6 +175,8 @@
                             <constraint firstItem="6hk-x0-VdF" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="Spn-bg-ZxW"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="j6r-8Y-YVb" secondAttribute="bottom" constant="61" id="WUt-bk-9uf"/>
                             <constraint firstItem="j6r-8Y-YVb" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="YhB-Fy-w7d"/>
+                            <constraint firstItem="2dk-iH-Vbe" firstAttribute="top" secondItem="B53-ph-y04" secondAttribute="bottom" constant="15" id="aiO-xf-YMe"/>
+                            <constraint firstItem="2dk-iH-Vbe" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="nUc-Ve-keD"/>
                             <constraint firstItem="B53-ph-y04" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="55" id="sT5-Tb-RcE"/>
                             <constraint firstItem="j6r-8Y-YVb" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="yKO-Eb-cGX"/>
                         </constraints>
@@ -176,6 +184,7 @@
                     </view>
                     <connections>
                         <outlet property="playerTurnLabel" destination="B53-ph-y04" id="DjO-CO-P5c"/>
+                        <outlet property="scoreBoardLabel" destination="2dk-iH-Vbe" id="EAQ-co-RCX"/>
                         <outletCollection property="gameButton" destination="VH2-oe-IS7" collectionClass="NSMutableArray" id="bp3-Fp-2l0"/>
                         <outletCollection property="gameButton" destination="ZfM-1w-9RX" collectionClass="NSMutableArray" id="hMw-t4-RWM"/>
                         <outletCollection property="gameButton" destination="tu7-D4-L5S" collectionClass="NSMutableArray" id="s36-Hi-YB3"/>
